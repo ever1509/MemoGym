@@ -17,6 +17,10 @@ public class Session
 
     public void ReserveSpot(Participant participant)
     {
-        _participants.Add(participant.GetParticipantId());
+        if (_participants.Count >= _maxParticipants)
+        {
+            throw new Exception("I cannot have more reservations for participants");
+        }
+        _participants.Add(participant.Id);
     }
 }

@@ -12,8 +12,5 @@ public class Participant
         _id = id ?? Guid.NewGuid();
     }
 
-    public Guid GetParticipantId()
-    {
-        return _id;
-    }
+    public Guid Id => _id;
 }
