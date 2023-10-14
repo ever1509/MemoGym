@@ -9,4 +9,9 @@ public static class SessionFactory
     {
         return new Session(maxParticipants, trainerId: Constants.Trainer.Id, id: id ?? Constants.Session.Id);
     }
+
+    public static Session CreateSession(DateTime date, TimeOnly startTime, TimeOnly endTime)
+    {
+        return new Session(date, startTime, endTime);
+    }
 }
